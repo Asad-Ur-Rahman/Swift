@@ -52,3 +52,24 @@ shopping.append("blue paint")
 let emptyArray: [String] = [] // empty array is created
 let emptyDict: [String: Float] = [:] // empty array is created
 
+shopping = []
+occupation = [:]
+
+// Control Flow
+
+let individualScores = [75, 43, 103, 87, 12]
+var teamScore = 0
+
+for i in individualScores
+{
+    if i > 50
+    {
+        teamScore += 3
+    }
+    else
+    {
+        teamScore += 1
+    }
+}
+
+print(teamScore)
