@@ -50,7 +50,7 @@ occupation
 shopping.append("blue paint")
 
 let emptyArray: [String] = [] // empty array is created
-let emptyDict: [String: Float] = [:] // empty array is created
+let emptyDict: [String: Float] = [:] // empty Dictonary is created
 
 shopping = []
 occupation = [:]
@@ -73,3 +73,39 @@ for i in individualScores
 }
 
 print(teamScore)
+
+
+// Optional
+
+var optionalString: String? = "hello!"
+
+print(optionalString == nil)
+
+
+var optionalName: String? = "Nin'nee"
+var greeting = "Hello!"
+
+if let name = optionalName
+{
+    greeting = "Hello, \(name)"
+}
+
+let nickname: String? = nil
+let fullName: String = "Chota bacha"
+let informalGreeting = "Hi \(nickname ?? fullName)" //Another way to handle optional values is to provide a default value using the ?? operator. If the optional value is missing, the default value is used instead.
+
+//Swtich Case
+
+let vegitable = "red"
+
+switch vegitable
+{
+case "celery":
+    print("Add some raisins and make ants on a log.")
+case "cucumber", "watercress":
+    print("That would make a good tea sandwich")
+case let x where x.hasSuffix("pepper"):
+    print("Is it a spicy \(x)")
+default:
+    print("Everything tastes good in soup")
+}
